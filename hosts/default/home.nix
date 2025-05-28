@@ -1,10 +1,9 @@
 { config, pkgs, lib, inputs, ... }:
 
-
 {
   imports =
     [
-      ../../modules/nixos/xremap.nix
+      ../../homeManagerModules/features/xremap.nix
     ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -33,6 +32,7 @@
     thunderbird
     nixd
     zotero
+    kitty
 
     (python3.withPackages(p: with p; [
       numpy

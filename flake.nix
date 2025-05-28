@@ -26,12 +26,12 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/default/configuration.nix
+          # ./nixosModules
           inputs.home-manager.nixosModules.default
         ];
       };
 
-      devShells.${system}.default = 
-        import ./shell.nix { inherit pkgs; };
+      # homeManagerModules.default = ./homeManagerModules;
 
     };
 }

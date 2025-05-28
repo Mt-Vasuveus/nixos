@@ -9,6 +9,10 @@
       remap = {
         "CapsLock" = "Esc";
         "Esc" = "CapsLock";
+        ## Keycodes aren't recognized
+        #"XF86NotificationCenter" = "PlayPause";
+        #"XF86PickupPhone" = "PreviousSong";
+        #"XF86HangupPhone" = "NextSong";
       };
     }];
     config.keymap = [{

@@ -27,6 +27,7 @@
     bitwarden-desktop
     thunderbird
     zotero
+    spotify
 
     # Emacs
     ripgrep
@@ -35,6 +36,7 @@
     kitty
 
     # Compatibility
+    wineWowPackages.stable
     winetricks
 
     # Coding

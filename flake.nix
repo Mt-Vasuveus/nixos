@@ -14,6 +14,7 @@
     };
 
     xremap-flake.url = "github:xremap/nix-flake";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
   };
 
@@ -28,6 +29,7 @@
           ./hosts/default/configuration.nix
           # ./nixosModules
           inputs.home-manager.nixosModules.default
+          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-7th-gen
         ];
       };
 

@@ -136,6 +136,7 @@ systemd.services.fprintd = {
     # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     vim
     wget
+    python3
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -17,7 +17,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -33,5 +33,15 @@
 
       # homeManagerModules.default = ./homeManagerModules;
 
+      devShells.${system}.default = pkgs.mkShell {
+        packages = [
+          pkgs.python3
+        ];
+
+        env.LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+          pkgs.stdenv.cc.cc.lib
+          pkgs.libz
+        ];
+      };
     };
 }

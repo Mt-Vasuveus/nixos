@@ -23,16 +23,25 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    zed-editor
-    vscode
-    winetricks
-    git
-    ripgrep
+    # Desktop apps
     bitwarden-desktop
     thunderbird
-    nixd
     zotero
+
+    # Emacs
+    ripgrep
+
+    # Hyprland
     kitty
+
+    # Compatibility
+    winetricks
+
+    # Coding
+    nixd
+    zed-editor
+    vscode
+    git
 
     (python3.withPackages(p: with p; [
       numpy
@@ -61,6 +70,7 @@
     builtins.elem (lib.getName pkg) [
       # Add additional package names here
       "vscode"
+      "spotify"
     ];
 
   # Emacs
